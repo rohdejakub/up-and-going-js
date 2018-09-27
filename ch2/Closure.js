@@ -25,3 +25,4 @@ console.log(plusOne( 3 ));		// 4  <-- 1 + 3
 console.log(plusOne( 41 ));		// 42 <-- 1 + 41
 
 console.log(plusTen( 13 ));		// 23 <-- 10 + 13
+
