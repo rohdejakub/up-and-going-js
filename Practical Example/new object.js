@@ -9,7 +9,7 @@ var myCar = {
         }
         let fuelUsed = (speed * time) / 100 * myCar.avgFuel;
         if( fuelUsed > myCar.fuelTank){
-            console.log('Zabraknie ci paliwa! Maksymalny dystans to '  + myCar.maxDistance + 'km. Przejedziesz ten dystans z prędkością ' + speed + ' w czasie ' + myCar.maxDistance / speed + 'h.');
+            console.log('Zabraknie ci paliwa! Maksymalny dystans to '  + myCar.maxDistance + 'km. Przejedziesz ten dystans z prędkością ' + speed + ' w czasie ' +  (myCar.maxDistance / speed).toFixed(2) + 'h.');
         }else{
         console.log('W czasie ' + time + 'h. Przejedziesz ' + speed * time + 'km.');
         };
