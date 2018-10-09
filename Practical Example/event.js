@@ -1,7 +1,8 @@
-var content = document.getElementById('content');
-var button = document.getElementById('show-more');
+function onClickEvent(){
+    var content = document.getElementById('content');
+    var button = document.getElementById('show-more');
 
-button.onclick = function(){
+    button.onclick = function(){
 
     if(content.className == "open"){
         content.className = '';
@@ -10,5 +11,14 @@ button.onclick = function(){
         content.className = 'open';
         button.innerHTML = 'show less';
     }
+
+};
+
+}
+
+
+window.onload = function(){
+
+    onClickEvent();
 
 };
