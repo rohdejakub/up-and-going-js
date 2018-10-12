@@ -1,0 +1,19 @@
+body{
+    background-color: #eee;
+}
+h2{
+    text-align: center;
+}
+#content{
+    background-color: #fff;
+    width: 400px;
+    font-family: calibri;
+    font-size: 18px;
+    color: #444;
+    padding: 20px;
+    padding-top: 0px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+    
