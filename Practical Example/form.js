@@ -1,26 +1,32 @@
-var myForm = document.forms.myForm;
-var validMessage = document.getElementById('message');
-var afterSubmit = document.getElementById('afterSubmit');
+var myForm = document.querySelector('#my-form');
+var validMessage = document.querySelector('#message');
+var afterSubmit = document.querySelector('#afterSubmit');
+var nameInput = document.querySelector('#name-input');
 
+function changeBorder() {
+    this.classList.add('xxx');
+}
+    
+function clearBorder() {
+    this.style.border = '';
+}
 
-myForm.name.onfocus = function(){
-    myForm.name.style.border = '4px solid blue';
-};
-myForm.name.onblur = function(){
-    myForm.name.style.border = '';
-};
-
-myForm.onsubmit = function(){
-
-    if (myForm.name.value == ''){
+function onSubmit(event) {
+    event.preventDefault();
+    if (myForm.name.value === ''){
         validMessage.innerHTML = 'please enter a name';
-        return false;
-    }else{
+    } else {
         validMessage.innerHTML = '';
-        return true;
-        
+        afterSubmit.innerHTML = myForm.name.value + '<br/>' +  myForm.colour.value;
+        myForm.name.value ='';
     }
 }
+
+nameInput.addEventListener('focus', changeBorder);
+nameInput.addEventListener('blur', clearBorder);
+myForm.addEventListener('submit', onSubmit);
+
+
 
 
 
